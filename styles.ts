@@ -1,9 +1,9 @@
 import { StyleSheet } from 'react-native';
-import { Theme } from './src/constants/colors.ts';
+import { Theme } from './src/constants/theme.ts';
 
 export default (theme: Theme) =>
   StyleSheet.create({
-    bg: {
+    surface: {
       backgroundColor: theme.background,
       flex: 1,
     },
