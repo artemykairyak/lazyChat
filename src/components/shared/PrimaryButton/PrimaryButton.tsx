@@ -1,6 +1,6 @@
 import { Text, TouchableHighlight } from 'react-native';
 import React from 'react';
-import { useTheme } from '../../../context/ThemeContext/ThemeContext.tsx';
+import { useTheme } from '../../../context/ThemeContext.tsx';
 import styles from './styles.ts';
 
 interface PrimaryButtonProps {

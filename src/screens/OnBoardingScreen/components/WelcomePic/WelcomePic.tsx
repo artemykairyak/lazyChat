@@ -1,5 +1,5 @@
 import Svg, { ClipPath, Defs, G, Path, Rect } from 'react-native-svg';
-import { useTheme } from '../../../../context/ThemeContext/ThemeContext.tsx';
+import { useTheme } from '../../../../context/ThemeContext.tsx';
 
 export const WelcomePic = () => {
   const { theme, isDarkMode } = useTheme();

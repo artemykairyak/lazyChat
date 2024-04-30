@@ -1,7 +1,7 @@
 import { Animated, Easing, Text, View } from 'react-native';
 import React from 'react';
 import styles from './styles.ts';
-import { useTheme } from '../../context/ThemeContext/ThemeContext.tsx';
+import { useTheme } from '../../context/ThemeContext.tsx';
 import { useAppNavigation } from '../../hooks/useAppNavigation.tsx';
 import { WelcomePic } from './components/WelcomePic/WelcomePic.tsx';
 import { PrimaryButton } from '../../components/shared/PrimaryButton/PrimaryButton.tsx';

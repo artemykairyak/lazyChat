@@ -1,6 +1,6 @@
 import { TextInput, TouchableOpacity, View } from 'react-native';
 import styles from './styles.tsx';
-import { useTheme } from '../../context/ThemeContext/ThemeContext.tsx';
+import { useTheme } from '../../context/ThemeContext.tsx';
 import { PersonIcon } from '../../components/shared/Icons/PersonIcon.tsx';
 import { PlusFilledIcon } from '../../components/shared/Icons/PlusFilledIcon.tsx';
 import { PrimaryButton } from '../../components/shared/PrimaryButton/PrimaryButton.tsx';

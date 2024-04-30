@@ -1,5 +1,5 @@
 import Svg, { Path } from 'react-native-svg';
-import { useTheme } from '../../../context/ThemeContext/ThemeContext.tsx';
+import { useTheme } from '../../../context/ThemeContext.tsx';
 
 export const PersonIcon = () => {
   const { theme } = useTheme();

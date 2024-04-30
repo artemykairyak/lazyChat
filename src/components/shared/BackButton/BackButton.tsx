@@ -2,7 +2,7 @@ import { Text, TouchableOpacity, View } from 'react-native';
 import { useAppNavigation } from '../../../hooks/useAppNavigation.tsx';
 import { ArrowLeftIcon } from '../Icons/ArrowLeftIcon.tsx';
 import styles from './styles.ts';
-import { useTheme } from '../../../context/ThemeContext/ThemeContext.tsx';
+import { useTheme } from '../../../context/ThemeContext.tsx';
 
 interface BackButtonProps {
   text: string;
