@@ -8,15 +8,16 @@ export default (theme: Theme) =>
       alignItems: 'center',
       justifyContent: 'space-between',
       paddingHorizontal: 24,
+      backgroundColor: theme.background,
     },
     imgContainer: {
       marginTop: Dimensions.get('window').height / 9,
       alignItems: 'center',
-      width: '78%',
-      aspectRatio: 262 / 271,
+      width: '80%',
     },
     img: {
       width: '100%',
+      aspectRatio: 262 / 271,
     },
     title: {
       fontFamily: FontFamily.bold,
@@ -24,6 +25,7 @@ export default (theme: Theme) =>
       textAlign: 'center',
       color: theme.text,
       marginTop: 42,
+      maxWidth: 280,
     },
     bottomControls: {
       paddingBottom: 20,
@@ -35,18 +37,5 @@ export default (theme: Theme) =>
       fontFamily: FontFamily.semiBold,
       marginBottom: 18,
       textAlign: 'center',
-    },
-    btn: {
-      backgroundColor: theme.primary,
-      height: 52,
-      justifyContent: 'center',
-      borderRadius: 30,
-    },
-    btnText: {
-      textAlign: 'center',
-      color: 'white',
-      fontSize: 16,
-      lineHeight: 16,
-      fontFamily: FontFamily.semiBold,
     },
   });

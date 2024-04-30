@@ -53,5 +53,9 @@
 		<string>Mulish-Regular.ttf</string>
 		<string>Mulish-SemiBold.ttf</string>
 	</array>
+	<key>UISupportedInterfaceOrientations</key>
+  <array>
+    <string>UIInterfaceOrientationPortrait</string>
+  </array>
 </dict>
 </plist>

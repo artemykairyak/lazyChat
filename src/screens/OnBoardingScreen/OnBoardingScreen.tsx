@@ -1,11 +1,14 @@
-import { Animated, Easing, Text, TouchableHighlight, View } from 'react-native';
+import { Animated, Easing, Text, View } from 'react-native';
 import React from 'react';
 import styles from './styles.ts';
 import { useTheme } from '../../context/ThemeContext/ThemeContext.tsx';
-import Img from '../../assets/images/onBoardingImg.svg';
+import { useAppNavigation } from '../../hooks/useAppNavigation.tsx';
+import { WelcomePic } from './components/WelcomePic/WelcomePic.tsx';
+import { PrimaryButton } from '../../components/shared/PrimaryButton/PrimaryButton.tsx';
 
 export const OnBoardingScreen = () => {
-  const { theme, isDarkMode, toggleTheme } = useTheme();
+  const navigation = useAppNavigation();
+  const { theme } = useTheme();
   const s = styles(theme);
 
   const imgTranslateX = new Animated.Value(-100);
@@ -31,11 +34,13 @@ export const OnBoardingScreen = () => {
         <Animated.View
           style={{
             transform: [{ translateX: imgTranslateX }],
-            width: s.img.width,
             opacity,
+            ...s.img,
           }}
         >
-          <Img width={s.img.width} />
+          <View style={s.img}>
+            <WelcomePic />
+          </View>
         </Animated.View>
         <Animated.Text
           style={[
@@ -50,12 +55,10 @@ export const OnBoardingScreen = () => {
       </View>
       <View style={s.bottomControls}>
         <Text style={s.policy}>Terms & Privacy Policy</Text>
-        <TouchableHighlight
-          style={s.btn}
-          underlayColor={theme.alternativePrimary}
-        >
-          <Text style={s.btnText}>Start Messaging</Text>
-        </TouchableHighlight>
+        <PrimaryButton
+          text="Start Messaging"
+          onPress={() => navigation.navigate('VerificationScreen')}
+        />
       </View>
     </View>
   );

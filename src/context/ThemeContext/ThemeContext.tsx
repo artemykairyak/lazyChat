@@ -10,22 +10,33 @@ import { darkTheme, lightTheme } from '../../constants/theme.ts';
 export const ThemeContext = createContext({
   theme: lightTheme,
   toggleTheme: () => {},
+  setTheme: (thm: 'dark' | 'light') => {},
   isDarkMode: false,
 });
+
+const systemThemeObj = {
+  dark: darkTheme,
+  light: lightTheme,
+};
 
 export const useTheme = () => useContext(ThemeContext);
 
 export const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
-  const [theme, setTheme] = useState(lightTheme);
+  const [theme, _setTheme] = useState(lightTheme);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleTheme = () => {
-    setTheme(theme === lightTheme ? darkTheme : lightTheme);
+    _setTheme(theme === lightTheme ? darkTheme : lightTheme);
     setIsDarkMode((prev) => !prev);
   };
 
+  const setTheme = (thm: 'dark' | 'light') => {
+    _setTheme(systemThemeObj[thm]);
+    setIsDarkMode(thm === 'dark');
+  };
+
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme, isDarkMode }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme, setTheme, isDarkMode }}>
       {children}
     </ThemeContext.Provider>
   );
