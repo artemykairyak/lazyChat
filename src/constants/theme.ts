@@ -7,6 +7,7 @@ export interface Theme {
   disabled: string;
   neutral: string;
   online: string;
+  purple: string;
 }
 
 export const lightTheme: Theme = {
@@ -18,6 +19,7 @@ export const lightTheme: Theme = {
   disabled: '#ADB5BD',
   neutral: '#EDEDED',
   online: '#2CC069',
+  purple: '#D2D5F9',
 };
 
 export const darkTheme: Theme = {
@@ -29,6 +31,7 @@ export const darkTheme: Theme = {
   disabled: '#ADB5BD',
   neutral: '#152033',
   online: '#2CC069',
+  purple: '#D2D5F9',
 };
 
 export const FontFamily = {

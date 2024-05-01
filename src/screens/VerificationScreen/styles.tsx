@@ -1,5 +1,5 @@
 import { Dimensions, StyleSheet } from 'react-native';
-import { FontFamily, Theme } from '../../constants/theme.ts';
+import { Theme } from '../../constants/theme.ts';
 
 const screenHeight = Dimensions.get('window').height;
 
@@ -28,11 +28,21 @@ export default (theme: Theme, keyboardIsOpen: boolean) =>
     circle: {
       width: 100,
       height: 100,
+      borderRadius: 100,
+    },
+    photo: {
       backgroundColor: theme.secondary,
       borderRadius: 100,
+      flex: 1,
+      width: '100%',
       justifyContent: 'center',
       alignItems: 'center',
       position: 'relative',
+    },
+    avatar: {
+      borderRadius: 100,
+      flex: 1,
+      width: '100%',
     },
     personIcon: {
       width: 40,
@@ -49,16 +59,7 @@ export default (theme: Theme, keyboardIsOpen: boolean) =>
       width: '100%',
       gap: 12,
     },
-    input: {
-      height: 36,
-      width: '100%',
-      backgroundColor: theme.secondary,
-      fontSize: 14,
-      fontFamily: FontFamily.semiBold,
-      borderRadius: 4,
-      paddingHorizontal: 8,
-      color: theme.text,
-    },
+
     btn: {
       width: '100%',
     },
